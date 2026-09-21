@@ -1,0 +1,12 @@
+# compiled CCPL programs (keep the bundled compiler)
+*.exe
+!coolc.exe
+!tcc/tcc.exe
+!tcc/i386-win32-tcc.exe
+
+# generated C
+*.gen.c
+
+# OS cruft
+Thumbs.db
+desktop.ini
