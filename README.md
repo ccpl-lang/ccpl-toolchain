@@ -5,7 +5,7 @@
 native `.exe`.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.2.0-informational.svg)](https://github.com/ccpl-lang/ccpl/releases)
+[![Version](https://img.shields.io/badge/version-0.3.0-informational.svg)](https://github.com/ccpl-lang/ccpl/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6.svg)](#requirements)
 [![Bundles TinyCC](https://img.shields.io/badge/bundles-TinyCC-lightgrey.svg)](THIRD_PARTY_NOTICES.md)
 
