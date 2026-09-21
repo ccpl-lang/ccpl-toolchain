@@ -5,7 +5,7 @@
 native `.exe`.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.2.0-informational.svg)](https://github.com/itzdanti/ccpl/releases)
+[![Version](https://img.shields.io/badge/version-0.2.0-informational.svg)](https://github.com/ccpl-lang/ccpl/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6.svg)](#requirements)
 [![Bundles TinyCC](https://img.shields.io/badge/bundles-TinyCC-lightgrey.svg)](THIRD_PARTY_NOTICES.md)
 
@@ -79,8 +79,8 @@ CCPL is a small, Lua-flavored language with optional native C types that compile
 a native executable through TinyCC. See the main compiler repository for the language
 reference and source:
 
-- **ccpl** â€” compiler and language implementation: <https://github.com/itzdanti/ccpl>
-- **vscode-ccpl** â€” VS Code syntax highlighting: <https://github.com/itzdanti/vscode-ccpl>
+- **ccpl** â€” compiler and language implementation: <https://github.com/ccpl-lang/ccpl>
+- **vscode-ccpl** â€” VS Code syntax highlighting: <https://github.com/ccpl-lang/vscode-ccpl>
 
 ## Updating the toolchain
 
