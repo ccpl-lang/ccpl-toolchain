@@ -1,6 +1,7 @@
-# compiled CCPL programs (keep the bundled compiler)
+# compiled CCPL programs (keep the bundled tools)
 *.exe
 !coolc.exe
+!clm.exe
 !tcc/tcc.exe
 !tcc/i386-win32-tcc.exe
 

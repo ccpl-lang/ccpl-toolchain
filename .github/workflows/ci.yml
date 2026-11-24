@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check versions
+        shell: pwsh
+        run: |
+          $expected = (Get-Content VERSION -Raw).Trim()
+          $coolc = (& .\coolc.exe --version) -join " "
+          $clm = (& .\clm.exe --version) -join " "
+          if ($coolc -notmatch [regex]::Escape($expected)) { throw "coolc version mismatch: $coolc" }
+          if ($clm -notmatch [regex]::Escape($expected)) { throw "clm version mismatch: $clm" }
+
+      - name: Smoke test
+        shell: pwsh
+        run: |
+          $out = Join-Path $env:TEMP "hello.exe"
+          .\coolc.exe hello.ccpl -o $out --run
+          if ($LASTEXITCODE -ne 0) { throw "hello.ccpl failed" }
+
+      - name: Check runtime copy
+        shell: pwsh
+        run: |
+          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ccpl-lang/ccpl/main/src/runtime.h" -OutFile runtime.main.h
+          $a = (Get-FileHash runtime.h -Algorithm SHA256).Hash
+          $b = (Get-FileHash runtime.main.h -Algorithm SHA256).Hash
+          if ($a -ne $b) { throw "runtime.h does not match the compiler repository" }
